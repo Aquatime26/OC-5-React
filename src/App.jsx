@@ -5,6 +5,7 @@ import About from "./Components/About";
 import Error from "./Components/Error404";
 import Header from "./Components/Header";
 import Banner from "./Components/Banner";
+import CardList from "./Components/Cardlist";
 import Footer from "./Components/Footer"; 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
       <Banner />
+      <CardList />
       <Footer />
     </>
   );
