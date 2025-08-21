@@ -1,10 +1,11 @@
 import './styles/App.scss'
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
-import About from "./components/About";
-import Error from "./components/Error404";
-import Header from "./components/Header";
-import Footer from "./components/Footer"; // Assuming you have a Footer component
+import About from "./Components/About";
+import Error from "./Components/Error404";
+import Header from "./Components/Header";
+import Banner from "./Components/Banner";
+import Footer from "./Components/Footer"; 
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
-
+      <Banner />
       <Footer />
     </>
   );

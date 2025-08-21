@@ -1,0 +1,35 @@
+.banner {
+  position: relative;              
+  width: 1240px;  
+  height: 223px;
+  background-image: url('../assets/pictures/BannerPicture1.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 25px; 
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // overlay noir semi-transparent
+    z-index: 1;  // derrière le texte
+    border-radius: 25px;
+  }
+
+  h2 {
+    width: 733px;
+    height: 68px;
+    position: relative;
+    z-index: 2; // texte au-dessus de l’overlay
+  }
+}

@@ -1,3 +1,4 @@
+import '../styles/Header.scss';
 import { Link } from "react-router-dom";
 
 function Header() {
