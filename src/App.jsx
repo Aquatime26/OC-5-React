@@ -1,46 +1,22 @@
-import { useEffect, useState } from 'react'
 import './styles/App.css'
-
+import { Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
+import About from "./components/About";
+import Error from "./components/Error404";
+import Header from "./components/Header";
 
 function App() {
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((json) => setData(json))
-      .catch((err) => console.error("Erreur JSON :", err));
-  }, []);
 
   return (
     <>
-      <header>
-        <h1>Kasa</h1>
-      </header>
-
-      <nav>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="about.html">A Propos</a></li>
-        </ul>
-      </nav>
-
-      <main>
-        <section>
-          <h2>Données depuis le JSON :</h2>
-          {data ? (
-            <pre>{JSON.stringify(data, null, 2)}</pre>
-          ) : (
-            <p>Chargement...</p>
-          )}
-        </section>
-      </main>
-
-      <footer>
-        <h2>Kasa</h2>
-        <p>© 2023 Kasa. All rights reserved.</p>
-      </footer>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
     </>
   );
 }
 
-export default App
+export default App;
