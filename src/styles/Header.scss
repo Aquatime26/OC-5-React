@@ -4,29 +4,29 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;       // optionnel, pour un peu d'espace sur les côtés
+  padding: 0 20px;       
   box-sizing: border-box;
 
   .logo {
-    margin: 0;           // retire les marges par défaut
+    margin: 0;           
   }
 
   nav {
     ul {
-      display: flex;       // éléments en ligne
+      display: flex;       
       list-style: none;    
       margin: 0;
       padding: 0;
-      gap: 20px;           // espace entre les liens
+      gap: 20px;           
 
       li {
         a {
-          text-decoration: none;  // supprime le soulignement par défaut
-          color: #000;            // couleur du texte, à adapter
+          text-decoration: none;  
+          color: #000;            
           font-weight: normal;
 
           &:hover {
-            text-decoration: underline; // soulignement au survol
+            text-decoration: underline; 
             color: black;
           }
         }
