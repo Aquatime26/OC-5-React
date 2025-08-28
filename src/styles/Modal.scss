@@ -24,14 +24,28 @@
   padding: 1.5em;
 }
 
-.modal-close {
+.modal-carousel {
+  position: relative;
+}
+
+.carousel-button {
   position: absolute;
-  top: 15px;
-  right: 20px;
-  background: none;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
   border: none;
-  font-size: 20px;
+  font-size: 2rem;
   cursor: pointer;
+  padding: 0 10px;
+  border-radius: 50%;
+}
+
+.carousel-button.prev { 
+    left: 10px; 
+}
+.carousel-button.next { 
+    right: 10px; 
 }
 
 .modal-image {
@@ -78,8 +92,8 @@
   .modal-tag {
     background: #FF6060;
     color: #fff;
-    width: 115px;
-    height: 25px;
+    min-width: 115px;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,12 +139,14 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 1.5em;
+  color: white;
 
  details {
     width: 48%;
-    background: #f7f7f7;
+    background: #FF6060;
     border-radius: 8px;
     padding: 10px;
+    text-align: left;
 
     summary {
       font-weight: 600;
@@ -141,6 +157,7 @@
     p, ul {
       margin: 0.5em 0 0 0;
       padding-left: 1em;
+      text-align: justify;
     }
 
     ul li {

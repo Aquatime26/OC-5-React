@@ -1,40 +1,39 @@
-// function Modal({ item, onClose }) {
-//   if (!item) return null;
-
-//   return (
-//     <div className="modal-overlay" onClick={onClose}>
-//       <div className="modal-content" onClick={e => e.stopPropagation()}>
-//         <button className="modal-close" onClick={onClose}>X</button>
-//         <h2>{item.title}</h2>
-//         <img src={item.cover} alt={item.title} className="modal-image" />
-//         <p>{item.description}</p>
-//         <p><strong>Hôte :</strong> {item.host.name}</p>
-//         <ul>
-//           {item.equipments.map((eq, i) => <li key={i}>{eq}</li>)}
-//         </ul>
-//         <div className="modal-tags">
-//           {item.tags.map((tag, i) => (
-//             <span key={i} className="modal-tag">{tag}</span>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Modal;
 import '../styles/Modal.scss';
+import { useState } from 'react';
 
 function Modal({ item, onClose }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   if (!item) return null;
+
+  const prevImage =(e) => {
+    e.stopPropagation();
+    setCurrentIndex((currentIndex - 1 + item.pictures.length) % item.pictures.length);
+  }
+
+  const nextImage = (e) => {
+    e.stopPropagation(); 
+    setCurrentIndex((currentIndex + 1) % item.pictures.length);
+  }
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>X</button>
 
-        {/* Image principale */}
-        <img src={item.cover} alt={item.title} className="modal-image" />
+        {/* Carrousel d'images */}
+        <div className="modal-carousel">
+          <img
+            src={item.pictures[currentIndex]}
+            alt={`${item.title} - Image ${currentIndex + 1}`}
+            className="modal-image"
+          />
+          {item.pictures.length > 1 && (
+            <>
+              <button className="carousel-button prev" onClick={prevImage}>&lt;</button>
+              <button className="carousel-button next" onClick={nextImage}>&gt;</button>
+            </>
+          )}
+        </div>
 
         <div className="modal-header">
           {/* Bloc gauche : titre + localisation + tags */}
