@@ -1,8 +1,14 @@
 import '../styles/Modal.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Modal({ item, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (item) {
+      setCurrentIndex(0); // Reset à la première image de chaque logement sélectionné
+    }
+  }, [item]);
 
   if (!item) return null;
 
@@ -31,6 +37,9 @@ function Modal({ item, onClose }) {
             <>
               <button className="carousel-button prev" onClick={prevImage}>&lt;</button>
               <button className="carousel-button next" onClick={nextImage}>&gt;</button>
+              <div className="carousel-counter">
+                {currentIndex + 1} / {item.pictures.length}
+              </div>
             </>
           )}
         </div>
