@@ -5,12 +5,13 @@ function Modal({ item, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (item) {
-      setCurrentIndex(0); // Reset à la première image de chaque logement sélectionné
-    }
+  
+  if (item) {
+    setCurrentIndex(0); // Reset à la première image de chaque logement sélectionné
+  }
   }, [item]);
 
-  if (!item) return null;
+  if (!item) return null; // Ne rien afficher si aucun item n'est sélectionné
 
   const prevImage =(e) => {
     e.stopPropagation();
