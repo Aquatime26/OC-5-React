@@ -1,0 +1,39 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  height: 100vh;   
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+
+  .error-code {
+    width: 600px;
+    height: 265px;
+    font-size: 12rem; 
+    font-weight: bold;
+    color: #FF6060;  
+    line-height: 265px; 
+    margin: 0;
+  }
+
+  .error-message {
+    color: #FF6060;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 1rem 0 2rem;
+  }
+
+  .back-home {
+    color: #000;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: normal;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #555;
+    }
+  }
+}

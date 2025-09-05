@@ -6,7 +6,7 @@ import '../styles/About.scss';
 
 function About() {
   return (
-    <div>
+    <div className="about-page">
       <Banner image={aboutBanner} />
 
       <div className="about-dropdowns">
