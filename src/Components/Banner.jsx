@@ -1,9 +1,12 @@
 import '../styles/Banner.scss';
 
-function Banner() {
+function Banner({image, text}) {
   return (
-    <div className="banner">
-      <h2>Chez vous et partout ailleurs</h2>
+    <div 
+      className="banner"
+      style={{ backgroundImage: `url(${image})` }}
+    >
+      {text && <h2>{text}</h2>}
     </div>
   );
 }

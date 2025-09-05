@@ -77,17 +77,33 @@ function Modal({ item, onClose }) {
         {/* Menus déroulants */}
         <div className="modal-dropdowns">
           <details>
-            <summary>Description</summary>
-            <p>{item.description}</p>
+            <summary className="dropdown-title">Description
+              {/* <FontAwesomeIcon
+                icon={["fas", "angle-up"]}
+                className="dropdown-arrow"
+                style={{ color: "#ffffff" }}
+              />   */}
+            </summary>
+            <div className="description-content">
+              <p>{item.description}</p>
+            </div>
           </details>
 
           <details>
-            <summary>Équipements</summary>
-            <ul>
-              {item.equipments.map((eq, i) => (
-                <li key={i}>{eq}</li>
-              ))}
-            </ul>
+            <summary className="dropdown-title">Équipements
+              {/* <FontAwesomeIcon
+                icon={["fas", "angle-up"]}
+                className="dropdown-arrow"
+                style={{ color: "#ffffff" }}
+              /> */}
+            </summary>
+            <div className="equipment-content">
+              <ul>
+                {item.equipments.map((eq, i) => (
+                  <li key={i}>{eq}</li>
+                ))}
+              </ul>
+            </div>
           </details>
         </div>
       </div>
