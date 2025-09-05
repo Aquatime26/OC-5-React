@@ -1,5 +1,6 @@
 import '../styles/Modal.scss';
 import { useState, useEffect } from 'react';
+import Dropdown from './Dropdown';
 
 function Modal({ item, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -76,35 +77,17 @@ function Modal({ item, onClose }) {
 
         {/* Menus déroulants */}
         <div className="modal-dropdowns">
-          <details>
-            <summary className="dropdown-title">Description
-              {/* <FontAwesomeIcon
-                icon={["fas", "angle-up"]}
-                className="dropdown-arrow"
-                style={{ color: "#ffffff" }}
-              />   */}
-            </summary>
-            <div className="description-content">
-              <p>{item.description}</p>
-            </div>
-          </details>
+          <Dropdown title="Description">
+            <p>{item.description}</p>
+          </Dropdown>
 
-          <details>
-            <summary className="dropdown-title">Équipements
-              {/* <FontAwesomeIcon
-                icon={["fas", "angle-up"]}
-                className="dropdown-arrow"
-                style={{ color: "#ffffff" }}
-              /> */}
-            </summary>
-            <div className="equipment-content">
-              <ul>
-                {item.equipments.map((eq, i) => (
-                  <li key={i}>{eq}</li>
-                ))}
-              </ul>
-            </div>
-          </details>
+          <Dropdown title="Équipements">
+            <ul>
+              {item.equipments.map((equip, i) => (
+                <li key={i}>{equip}</li>
+              ))}
+            </ul>
+          </Dropdown>
         </div>
       </div>
     </div>

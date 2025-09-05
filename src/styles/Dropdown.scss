@@ -1,0 +1,27 @@
+.dropdown {
+  width: 48%;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: left;
+
+  summary {
+    background: #FF6060;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+  }
+
+  p, ul {
+    text-align: justify;
+  }
+
+  ul li {
+    list-style: none;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+}
