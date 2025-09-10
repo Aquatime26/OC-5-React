@@ -12,3 +12,18 @@ function CardGrid({ items, onCardClick }) {
 }
 
 export default CardGrid;
+
+// import '../styles/CardGrid.scss';
+// import Card from "./Card";
+
+// function CardGrid({ items }) {
+//   return (
+//     <div className="card-grid">
+//       {items.map(item => (
+//         <Card key={item.id} data={item} />
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default CardGrid;

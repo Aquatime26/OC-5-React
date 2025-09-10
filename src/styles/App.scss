@@ -1,15 +1,17 @@
-#root {
+.app-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 
 // Style responvisive pour les petits écrans
 @media (max-width: 375px) {
-  #root {
+  .app-content {
     max-width: 335px;
-    padding: 1rem;
   }
 }

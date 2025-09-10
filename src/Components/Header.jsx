@@ -12,7 +12,6 @@ function Header() {
         <ul>
           <li><Link to="/">Accueil</Link></li>
           <li><Link to="/about">À Propos</Link></li>
-          <li><Link to="/error">Test 404</Link></li>
         </ul>
       </nav>
     </header>
