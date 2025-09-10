@@ -1,11 +1,11 @@
 import '../styles/Header.scss';
 import { Link } from "react-router-dom";
-import logo from '../assets/pictures/logo.webp';
+import logo from '../assets/pictures/logorouge.svg';
 
 function Header() {
   return (
     <header>
-      <div className="logo">
+      <div className="header-logo">
          <img src={logo} alt="Kasa Logo" />
       </div>
       <nav>

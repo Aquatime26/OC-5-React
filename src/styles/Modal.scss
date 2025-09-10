@@ -152,3 +152,70 @@
   width: 100%;
   margin-top: 1.5em;
 }
+
+
+// Style responvisive pour les petits écrans
+@media (max-width: 375px) {
+  .modal-content {
+    padding: 1em;
+    margin: 1em auto;
+  }
+
+  .modal-image {
+    height: 40vh;
+  }
+
+  .carousel-counter {
+    display: none;
+  }
+
+  .carousel-button {
+    font-size: 1.5rem;
+    padding: 0 8px;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .modal-info {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .modal-title {
+    font-size: 24px;
+  }
+
+  .modal-location {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .modal-tags {
+    justify-content: flex-start;
+
+    .modal-tag {
+      min-width: auto;
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+  }
+
+  .modal-host-rating {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .host-name {
+    font-size: 12px;
+  }
+
+  .modal-rating {
+    font-size: 18px;
+  }
+}

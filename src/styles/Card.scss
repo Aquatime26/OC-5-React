@@ -60,3 +60,21 @@
     word-break: break-word;
   }
 }
+
+
+// Style responvisive pour les petits écrans
+@media (max-width: 375px) {
+  .card {
+    width: 335px;
+    height: 255px;
+    border-radius: 8px;
+
+    &__title {
+      width: 180px;
+      bottom: 15px;
+      left: 15px;
+      right: 10px;
+      padding: 4px 8px;
+    }
+  }
+}

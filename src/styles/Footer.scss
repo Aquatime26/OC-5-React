@@ -1,11 +1,14 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-    background-color: #1a1a1a;
-    color: #fff;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   padding: 1rem;
+   background-color: #1a1a1a;
+   color: #fff;
+   box-sizing: border-box;
+   margin: 0;
 }
 
 .footer-logo {
@@ -15,4 +18,21 @@
 .footer-logo img {
    width: 122px;
    height: auto;
+}
+
+@media (max-width: 375px) {
+   .footer-logo img {
+      width: 100px;
+    }
+
+    .footer p {
+      width: 120px;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
 }

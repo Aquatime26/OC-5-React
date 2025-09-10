@@ -33,3 +33,19 @@
     z-index: 2; // texte au-dessus de l’overlay
   }
 }
+
+
+// Style responvisive pour les petits écrans
+@media (max-width: 375px) {
+  .banner {
+    width: 335px;
+    height: 120px;
+    border-radius: 15px;
+
+    h2 {
+      width: 295px;
+      height: auto;
+      font-size: 1.2rem;
+    }
+  }
+}
