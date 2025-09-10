@@ -2,20 +2,22 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    gap: 30px;
 }
 
-.about-dropdown {
+.about-dropdowns {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     margin : 2rem auto;
-    width: 75%;
+    width: 80%;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding-bottom: 2rem;
+
+    .dropdown {
+        width: 100%;
+        height: auto;
+    }
 }
-// .dropdown {
-//     position: relative;
-//     left: 140px;
-//     align-items: center;
-//     justify-content: center;
-//     width: 75%;
-// }

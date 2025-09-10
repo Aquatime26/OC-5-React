@@ -6,9 +6,10 @@ import '../styles/About.scss';
 
 function About() {
   return (
+
     <div className="about-page">
       <Banner image={aboutBanner} />
-
+      
       <div className="about-dropdowns">
         <Dropdown title="Fiabilité">
           <p>Les annonces postées sur Kasa garantissent une fiabilité totale. 

@@ -6,6 +6,7 @@
   .dropdown-title {
     display: flex;
     align-items: center;
+    height: 28px;
     justify-content: space-between;
     background: #FF6060;
     padding: 10px;
@@ -28,7 +29,11 @@
   }
 
   .dropdown-button i {
+    display: inline-block;
     transition: transform 0.4s ease;
+    font-size: 24px;
+    width: auto;
+    height: auto;
   }
 
   .dropdown-button i.open {
@@ -38,19 +43,16 @@
   .dropdown-content {
     transition: max-height 0.5s ease;
     overflow: hidden;
+    background: #F6F6F6;
   }
 
   .dropdown-content.open {
     max-height: 500px; 
   }
 
-  i.fa-chevron-up {
-    object-fit: cover;
-  }
-
   p, ul {
     text-align: justify;
-    margin: 10px;
+    margin: 10px 20px 20px 10px;
   }
 
   ul {
