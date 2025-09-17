@@ -1,6 +1,4 @@
 .logement-page {
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
   max-width: 1200px;
   margin: 2em auto;
   padding: 1.5em;
@@ -135,10 +133,12 @@
   margin-top: 1.5em;
 }
 
-/* Responsive */
+
+
+/* Responsive pour les petits écrans*/
 @media (max-width: 375px) {
   .logement-page {
-    padding: 1em;
+    padding: 0;
     margin: 1em auto;
   }
 

@@ -5,7 +5,6 @@
   gap: 100px;
   height: auto;   
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
 
   .error-code {
     width: 600px;
@@ -41,8 +40,8 @@
 // Style responvisive pour les petits écrans
 @media (max-width: 375px) {
   .error-page {
-    gap: 50px;
-    padding: 0 1rem;
+    gap: 40px;
+    padding: 1rem;
 
     .error-code {
       width: 200px;
