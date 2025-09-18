@@ -14,9 +14,9 @@ function Logement() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    let isMounted = true; // Pour éviter les fuites de mémoire
+    let isMounted = true;
     if (item) {
-        setCurrentIndex(0); // Reset à la première image de chaque logement sélectionné
+        setCurrentIndex(0);
         setLoading(false);
         return;
     }
