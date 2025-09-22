@@ -1,8 +1,10 @@
 import '../styles/Header.scss';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from '../assets/pictures/logorouge.svg';
 
 function Header() {
+  const location = useLocation();
+
   return (
     <header>
       <div className="header-logo">
@@ -10,8 +12,8 @@ function Header() {
       </div>
       <nav>
         <ul>
-          <li><Link to="/">Accueil</Link></li>
-          <li><Link to="/about">À Propos</Link></li>
+          <li><Link to="/" style={{ textDecoration: location.pathname === '/' ? 'underline' : 'none' }}>Accueil</Link></li>
+          <li><Link to="/about" style={{ textDecoration: location.pathname === '/about' ? 'underline' : 'none'}}>À Propos</Link></li>
         </ul>
       </nav>
     </header>

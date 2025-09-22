@@ -1,4 +1,3 @@
-
 import '../styles/Card.scss';
 
 function Card({ data, onClick }) {

@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
-  height: auto;   
   text-align: center;
+  gap: 100px;
+  height: auto;  
+  
 
   .error-code {
     width: 600px;
@@ -38,9 +39,9 @@
 }
 
 // Style responvisive pour les petits écrans
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .error-page {
-    gap: 40px;
+    min-height: 40vh;
     padding: 1rem;
 
     .error-code {
